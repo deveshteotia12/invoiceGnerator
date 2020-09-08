@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+  
+}
+.collapse{
+    padding-left: 70%;
+}
+.move{
+    margin-left: 10px;
+}
+.container-fluid{
+    padding: 10% 15%;
+    
+}
