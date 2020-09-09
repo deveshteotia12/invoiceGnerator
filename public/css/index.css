@@ -12,3 +12,88 @@
     padding: 10% 15%;
     
 }
+/* Designing the template for invoice */
+.myBox{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    border: solid 4px red;
+}
+.Title{
+    position: absolute;
+    right: 40%;
+    top: 0;
+    
+}
+.Title>h1{
+    font-size: 50px;
+    font-weight: 600;
+    box-shadow: 1px 1px 1px black;
+}
+.details{
+    position: absolute;
+    width: 40%;
+    top: 20%;
+    left: 30%;
+}
+.details>p{
+    font-size: 30px;
+    font-weight: 500;
+}
+.foreign{
+    margin-left: 20px;
+    font-weight: normal;
+}
+.details{
+    position: relative;
+}
+.foreign{
+    position: absolute;
+    right: 0;
+}
+footer{
+    position: absolute;
+    top: 90%;
+    left: 38%;
+}
+footer>p{
+    font-size: 25px;
+}
+.logo{
+    width: 200px;
+    height: 140px;
+    position: absolute;
+    top: 0;
+    right: 5%;
+    background-color: black;
+    color: white;
+}
+.invoiceNo>h1{
+    font-size: 30px;
+}
+
+/* designing invoice page */
+.invoicedata{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.invoices{
+    display: flex;
+    border: solid 2px grey;
+    width: 90%;
+
+}
+.buttons{
+   margin: 1% 70%;
+    display: flex;
+    
+}
+.buttons>.btn{
+    margin: 2px;
+}
+.invoices>p{
+    margin-left: 20px;
+}
+
