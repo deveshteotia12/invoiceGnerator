@@ -21,38 +21,33 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item active">
-                  <a class="nav-link move" href="#">Home<span class="sr-only">(current)</span></a>
+                  <a class="nav-link move" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link move" href="/pdf">Print</a>
+                  <a class="nav-link move" href="#">Your Invoice</a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link move" href="/invoice">Go Back</a>
+                  <a class="nav-link move" href="#">Login</a>
                 </li>
               </ul>
             </div>
           </nav>
     </section>
-    <div class="myBox">
-        <section class="logo">
-              <p>Logo</p>
-        </section>
-        <section class="invoiceNo">
-          <h1>Invoice No - <span>NB001</span></h1>
-        </section>
-        <section class="Title">
-            <h1>Zara Infotech</h1>
-        </section>
-        <section class="details">
-            <p>Customer Name : <span class="foreign"><%=name%></span></p>
-            <p>Product Purchased : <span class="foreign"><%=product%></span></p>
-            <p>Price : <span class="foreign"><%=price%></span></p>
-            <p>Quantity : <span class="foreign"><%=quantity%></span></p>
-            <p>Total : <span class="foreign"><%=total%></span></p>
-        </section>
-        <footer>
-            <p class="foot">Thank You for Shopping with us</p>
-        </footer>
-    </div>
+    <section>
+        <div class="invoicedata">
+                <% for (var i =0; i <Number.length;  i++ ) {%>
+                <div class="invoices">
+                    <p>Invoice <%=Number[i]%></p>
+                    <div class="buttons">
+                        <form action="/index/<%=Number[i]%>" method="GET">
+                        <button  type="submit" value="<%=Number[i]%>" class="btn btn-primary">View</button>
+                         </form>
+                        <form action="/pdf/<%=Number[i]%>" method="GET">
+                        <button type="submit" value="<%=Number[i]%>" class="btn btn-primary">Print</button>
+                        </form>
+                    </div>
+                </div>
+                <%}%>
+        </div>
+    </section>
 </body>
-</html>
