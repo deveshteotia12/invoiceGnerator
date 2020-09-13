@@ -9,11 +9,13 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/index.css">
-    
 </head>
 <body>
+  
     <section>
+      
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          
             <a class="navbar-brand" href="#">Invoice</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -24,42 +26,32 @@
                   <a class="nav-link move" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link move" href="#">Your Invoice</a>
+                  <a class="nav-link move" href="#">Analysis<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link move" href="#">Login</a>
+                  <a class="nav-link move" href="/invoice">Your Invoice</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link move" href="/admin">Admin</a>
                 </li>
               </ul>
-            </div>
+          
+          </div>
           </nav>
     </section>
     <section>
-        <div class="invoiceSearch">
-           <form action="invoiceSearch" method="POST">
-             <input type="text" name="invoiceSearch" placeholder="Search Your Invoice">
-             <select name="option">
-              <option value="invoiceNumber">InvoiceNo</option>
-              <option value="name">Customer</option>
-              <option value="data">Date</option>
-              <option value="productName">Products</option>
-             </select>
-             <button type="submit">Submit</button>
-           </form>
+        <div class="amount">
+              <div class="amountBox total">
+                  <h1>Total Amount: <%=total%></h1>
+              </div>
+              <div class="amountBox Paid">
+                  <h1>Paid: <%=paid%></h1>
+              </div>
+              <div class="amountBox unpaid">
+                  <h1>Unpaid: <%=unpaid%></h1>
+              </div>
         </div>
-        <div class="invoicedata">
-                <% for (var i =0; i <number.length;  i++ ) {%>
-                <div class="invoices">
-                    <p>Invoice <%=number[i]%></p>
-                    <div class="buttons">
-                        <form action="/index/<%=number[i]%>" method="GET">
-                            <button  type="submit" value="<%=number[i]%>" class="btn btn-primary">View</button>
-                         </form>
-                        <form action="/pdf/<%=number[i]%>" method="GET">
-                          <button type="submit" value="<%=number[i]%>" class="btn btn-primary">Print</button>
-                        </form>
-                    </div>
-                  </div>
-                <%}%>
-        </div>
+        
     </section>
 </body>
+  

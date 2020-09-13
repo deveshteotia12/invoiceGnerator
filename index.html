@@ -35,32 +35,41 @@
     <section>
       <div class="container-fluid">
         <form action="/data" method="POST">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Customer Name</label>
-            <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div class="mycontainer">
+              <div class="form-group cutomerDetails">
+                  <h1>Customer Details</h1>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Customer Name</label>
+                    <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                  <div class="form-group">
+                    <label for="Invoice">Invoice Number</label>
+                    <input type="number" name="Invoice" class="form-control" id="Invoice">
+                  </div>
+              </div>
+              <div class="form-group productDetails">
+                  <h1>Product Details</h1>
+                  <div class="form-group">
+                    <label for="productPurchased">Product Purchased</label>
+                    <input type="text" name="product" class="form-control" id="productPurchsed">
+                  </div>
+                  <div class="form-group">
+                    <label for="quantityPurchased">Quantity</label>
+                    <input type="number" name="quantity" class="form-control" id="quantityPurchsed">
+                  </div>
+                  <div class="form-group">
+                    <label for="Price">Price</label>
+                    <input type="number" name="price" class="form-control" id="Price">
+                  </div>
+              </div>
           </div>
-          <div class="form-group">
-            <label for="productPurchased">Product Purchased</label>
-            <input type="text" name="product" class="form-control" id="productPurchsed">
-          </div>
-          <div class="form-group">
-            <label for="quantityPurchased">Quantity</label>
-            <input type="number" name="quantity" class="form-control" id="quantityPurchsed">
-          </div>
-          <div class="form-group">
-            <label for="Price">Price</label>
-            <input type="number" name="price" class="form-control" id="Price">
-          </div>
-          <div class="form-group">
-            <label for="Invoice">Invoice Number</label>
-            <input type="number" name="Invoice" class="form-control" id="Invoice">
+          <div class="purchase">
+               
           </div>
           <button type="submit" class="btn btn-primary">Submit Details</button>
         </form>
-      </section>
-      <form action="/pdf" method="POST">
-          <button type="submit">Print</button>
-      </form>
-    </div>
+      </div>
+    </section>
+    
 </body>
 </html>

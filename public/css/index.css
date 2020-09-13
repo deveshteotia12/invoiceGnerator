@@ -3,75 +3,58 @@
   
 }
 .collapse{
-    padding-left: 70%;
+    padding-left: 60%;
 }
 .move{
     margin-left: 10px;
 }
 .container-fluid{
-    padding: 10% 15%;
+    padding: 5% 15%;
     
+}
+.mycontainer{
+    display: flex;
+    justify-content: space-around;
+}
+.productDetails{
+    margin-right: 30%;
 }
 /* Designing the template for invoice */
-.myBox{
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    border: solid 4px red;
+.invoiceContainer{
+    padding: 10% 5%;
 }
-.Title{
-    position: absolute;
-    right: 40%;
-    top: 0;
+.myBox{
+    padding: 0 10%;
+    display: flex;
+    justify-content: space-between;
+}
+.myBox2{
+    padding: 5% 10%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+.myBox3{
+    margin: 10% 10%;
+    border-top: 2px solid black;
+}
+.invoiceContainer p{
+    font-size: 20px;
+}
+.small{
+    font-size: 15px;
+}
+.totalPrice{
+    padding-left:70%;
+    border-bottom: 2px solid black;
     
 }
-.Title>h1{
-    font-size: 50px;
-    font-weight: 600;
-    box-shadow: 1px 1px 1px black;
-}
-.details{
-    position: absolute;
-    width: 40%;
-    top: 20%;
-    left: 30%;
-}
-.details>p{
-    font-size: 30px;
-    font-weight: 500;
-}
-.foreign{
-    margin-left: 20px;
-    font-weight: normal;
-}
-.details{
-    position: relative;
-}
-.foreign{
-    position: absolute;
-    right: 0;
-}
-footer{
-    position: absolute;
-    top: 90%;
-    left: 38%;
-}
-footer>p{
+td{
     font-size: 25px;
 }
-.logo{
-    width: 200px;
-    height: 140px;
-    position: absolute;
-    top: 0;
-    right: 5%;
-    background-color: black;
-    color: white;
+th{
+    font-size: 25px;
 }
-.invoiceNo>h1{
-    font-size: 30px;
-}
-
 /* designing invoice page */
 .invoicedata{
     display: flex;
@@ -97,3 +80,53 @@ footer>p{
     margin-left: 20px;
 }
 
+/* Styling Login Page */
+.loginContainer{
+    height: 100vh;
+    width: 100vw;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    
+}
+.loginBox{
+    overflow: auto;
+    background-color: white;
+    width: 34%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    padding: 10px 40px;
+    border-radius: 3px;
+    box-shadow: 3px 1px 1px rgb(209, 197, 197);
+}
+
+/* Styling the purchased product details on main page */
+.purchaseDetails{
+    border: 2px solid black;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.purchaseDetails p{
+    font-size: 30px;
+}
+.away{
+    margin-left: 20px;
+    margin-right: 60px;
+    font-size: 25px;
+}
+/* Styling the analysis part */
+.amount{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+
+
+/* Styling Admin Page */
+#admin{
+    padding: 5% 10%;
+}
+.inputImage{
+    margin-top: 5%;
+}

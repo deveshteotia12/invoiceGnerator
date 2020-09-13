@@ -33,26 +33,54 @@
             </div>
           </nav>
     </section>
+  <section class="invoiceContainer">
     <div class="myBox">
-        <section class="logo">
-              <p>Logo</p>
-        </section>
-        <section class="invoiceNo">
-          <h1>Invoice No - <span>NB001</span></h1>
-        </section>
-        <section class="Title">
-            <h1>Zara Infotech</h1>
-        </section>
-        <section class="details">
-            <p>Customer Name : <span class="foreign"><%=name%></span></p>
-            <p>Product Purchased : <span class="foreign"><%=product%></span></p>
-            <p>Price : <span class="foreign"><%=price%></span></p>
-            <p>Quantity : <span class="foreign"><%=quantity%></span></p>
-            <p>Total : <span class="foreign"><%=total%></span></p>
-        </section>
-        <footer>
-            <p class="foot">Thank You for Shopping with us</p>
-        </footer>
+        <div >
+            <h1 style="margin-bottom: 10%;"><%=Name%></h1>
+            <p><%=Address1%></p>
+            <p><%=Address2%></Address></p>
+        </div>
+        <div>
+          <img src="/logo.jpg" alt="Logo" width="250" height="200"></img>
+        </div>
     </div>
+    <div class="myBox2">
+        <div>
+          <h3 style="margin-bottom: 15%;">Bill To</h3>
+          <p><%=name%></p>
+          <p>Address</p>
+        </div>
+        <div style="margin-right: 28%;">
+            <h3 style="margin-bottom: 15%;">Details</h3>
+          <p>Invoice No: <%=invoiceNumber%></p>
+          <p>Date: 12/10/2020</p>
+        </div>
+    </div>
+    <div class="myBox3">
+      <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Product</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Unit Price</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%for(var i=0;i<product.length;i++){%>
+          <tr>
+            <td><%=product[i].productName%></td>
+            <td><%=product[i].quantity%></td>
+            <td><%=product[i].price%></td>
+            <td><%=product[i].price*product[i].quantity%></td>
+          </tr>
+       <% } %>
+        </tbody>
+      </table>
+      <div class="totalPrice">
+        <h3>Total : <%=total%></h3>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
