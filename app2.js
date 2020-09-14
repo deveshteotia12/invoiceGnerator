@@ -340,6 +340,10 @@ app.get("/pdf/:Number",function(req,res){
 })
 
 
-app.listen(1000,function(){
-    console.log("running");
-})
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 1000;
+}
+app.listen(port,function(){
+    console.log("App has started");
+});
