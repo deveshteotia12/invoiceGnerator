@@ -65,13 +65,14 @@ th{
 .invoices{
     display: flex;
     border: solid 2px grey;
+    justify-content: space-between;
     width: 90%;
+    padding: 10px;
 
 }
 .buttons{
-   margin: 1% 70%;
+   
     display: flex;
-    
 }
 .buttons>.btn{
     margin: 2px;
@@ -79,26 +80,22 @@ th{
 .invoices>p{
     margin-left: 20px;
 }
-
-/* Styling Login Page */
-.loginContainer{
-    height: 100vh;
-    width: 100vw;
-    background-color: gray;
+.arrange{
     display: flex;
-    justify-content: center;
-    
+    justify-content: space-between;
 }
-.loginBox{
-    overflow: auto;
-    background-color: white;
-    width: 34%;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    padding: 10px 40px;
-    border-radius: 3px;
-    box-shadow: 3px 1px 1px rgb(209, 197, 197);
+.invoiceSearch{
+    margin-left: 55px;
+    margin-bottom: 20px;
 }
+.deleteButton{
+    margin-right: 55px;
+    margin-bottom: 20px;
+}
+.form1{
+    margin: 0 5px;
+}
+
 
 /* Styling the purchased product details on main page */
 .purchaseDetails{
@@ -121,6 +118,20 @@ th{
     justify-content: space-around;
     margin-top: 5%;
 }
+.amountBox{
+    color: white;
+    background-color: rgba(67, 83, 87, 0.788);
+    border-radius: 3px;
+    padding: 50px;
+    width: 300px;
+    text-align: center;
+    
+}
+.minMax{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+}
 
 
 /* Styling Admin Page */
@@ -129,4 +140,12 @@ th{
 }
 .inputImage{
     margin-top: 5%;
+}
+/*Footer */
+footer{
+    margin-top: 10%;
+    width: 100%;
+    position: absolute;
+    
+    text-align: center;
 }

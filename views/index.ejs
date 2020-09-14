@@ -14,17 +14,17 @@
 <body>
     <section>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Invoice</a>
+            <a class="navbar-brand" href="/">Invoice</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item active">
-                  <a class="nav-link move" href="#">Home<span class="sr-only">(current)</span></a>
+                  <a class="nav-link move" href="/">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link move" href="/pdf">Print</a>
+                  <a class="nav-link move" href="/pdf/<%=number%>">Print</a>
                 </li>
                 <li class="nav-item active">
                   <a class="nav-link move" href="/invoice">Go Back</a>
@@ -39,6 +39,7 @@
             <h1 style="margin-bottom: 10%;"><%=Name%></h1>
             <p><%=Address1%></p>
             <p><%=Address2%></Address></p>
+            <p>Phone No: <%=PhoneNumber%></p>
         </div>
         <div>
           <img src="/logo.jpg" alt="Logo" width="250" height="200"></img>
@@ -48,12 +49,11 @@
         <div>
           <h3 style="margin-bottom: 15%;">Bill To</h3>
           <p><%=name%></p>
-          <p>Address</p>
         </div>
         <div style="margin-right: 28%;">
             <h3 style="margin-bottom: 15%;">Details</h3>
           <p>Invoice No: <%=invoiceNumber%></p>
-          <p>Date: 12/10/2020</p>
+          <p>Date: <%=Day%>/<%=Month%>/<%=Year%></p>
         </div>
     </div>
     <div class="myBox3">
@@ -78,6 +78,7 @@
         </tbody>
       </table>
       <div class="totalPrice">
+        <h3>Discount : <%=discount%> %</h3>
         <h3>Total : <%=total%></h3>
       </div>
     </div>

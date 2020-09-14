@@ -16,14 +16,14 @@
       
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           
-            <a class="navbar-brand" href="#">Invoice</a>
+            <a class="navbar-brand" href="/">Invoice</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item active">
-                  <a class="nav-link move" href="/main">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link move" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
                   <a class="nav-link move" href="/analysis">Analysis<span class="sr-only">(current)</span></a>
@@ -45,6 +45,7 @@
       <div class="container-fluid">
         <form id="form2" action="/productData" method="POST"></form>
         <p style="color: rgb(24, 163, 24); font-size: 28px;"><%=productArray.length%> products added to this Bill</p>
+        <p style="margin-top: 3%;">Note: Add Your Logo and Details in Admin Section</p>
         <form action="/gulaothi" method="POST">
             <div class="mycontainer">
               <div class="form-group productDetails">
@@ -62,6 +63,7 @@
                   <input type="number" name="price" class="form-control" id="Price" form="form2">
                 </div>
                 <button type="submit" form ="form2" class="btn btn-primary">Add Products</button>
+               
             </div>
               <div class="form-group cutomerDetails">
                   <h1 class="heading" style="margin-bottom: 10%;">Customer Details</h1>
@@ -73,27 +75,36 @@
                     <label for="Invoice">Invoice Number</label>
                     <input type="number" name="Invoice"  class="form-control" id="Invoice">
                   </div>
-                  <button type="submit" class="btn btn-primary invoiceButton" style="margin-top: 25%;">Submit Invoice</button>
-                  <p style="margin-top: 10%;">Note: Add Product Details and Verify </p>
+                  <div class="form-group">
+                    <label for="discount">Discount</label>
+                    <input type="number" name="discount"  class="form-control" id="Invoice" value="0">
+                  </div>
+                  <button type="submit" class="btn btn-primary invoiceButton" >Submit Invoice</button>
+                  <p style="margin-top: 10%;">Note: Add Product Details and the Submit </p>
               </div>
              
               
           </div>
-          <div class="purchase" style="margin-top: 10%;">
+        </form>
+          <div class="purchase" style="margin-top: 3%;">
               <h2>Purchased Product Details</h2> 
+              <form action="/restore" method="POST">
+                  <button class="btn btn-danger">Restore</button>
+              </form>
               <%for(var i=0;i<productArray.length;i++){%>
                     <div class="purchaseDetails">
                         <p>Product : <span class="away"><%=productArray[i].productName%></span> Price : <span class="away"><%=productArray[i].price%></span> Quantity: <span class="away"><%=productArray[i].quantity%></span></p>
-                    </div>
-                    
+                    </div> 
               <%}%>
               <h2 style="margin-top: 15px; font-size: 25px;">Total Amount: Rs <%=total%></h2>
               
           </div>
           
-        </form>
+        
       </div>
     </section>
-    
+    <footer>
+          <p>Created By Devesh Teotia</p>
+    </footer>
 </body>
 </html>
